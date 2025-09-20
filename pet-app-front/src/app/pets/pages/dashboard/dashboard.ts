@@ -1,18 +1,13 @@
-import { Component, inject } from '@angular/core';
-import { PetService } from '../../services/pet.service';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [RouterLink, RouterLinkActive, RouterOutlet],
+  imports: [],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
 export default class Dashboard {
-  petService = inject(PetService)
+  title = 'Dashboard section'
 
-  dashboardLink = "/dashboard"
-  searchLink = "/dashboard/search"
-
-  petServiceData = this.petService.getAllPets()
+  // Pagina principal de informacion sobre las mascotas
 }
