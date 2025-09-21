@@ -1,1 +1,111 @@
-<p class="text-2xl">{{ title }}</p>
+<main class="p-6 sm:p-10 md:p-12 bg-gray-100 dark:bg-gray-900 min-h-screen">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg md:col-span-2">
+            <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Tu Desempeño</h2>
+            <div class="w-full h-64 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 dark:text-gray-500">
+                [Aquí va el gráfico de estadísticas]
+            </div>
+            <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded-lg text-center">
+                    <p class="text-2xl font-bold text-blue-600 dark:text-blue-300">1.2K</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Vistas</p>
+                </div>
+                <div class="bg-green-100 dark:bg-green-900 p-4 rounded-lg text-center">
+                    <p class="text-2xl font-bold text-green-600 dark:text-green-300">15%</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Interacción</p>
+                </div>
+                <div class="bg-yellow-100 dark:bg-yellow-900 p-4 rounded-lg text-center">
+                    <p class="text-2xl font-bold text-yellow-600 dark:text-yellow-300">5</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Nuevos Seguidores</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg md:col-span-2 lg:col-span-1">
+            <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Progreso de Metas</h2>
+            <div class="w-24 h-24 mx-auto my-4 rounded-full bg-indigo-200 dark:bg-indigo-700 flex items-center justify-center">
+                <p class="text-lg font-bold text-indigo-700 dark:text-indigo-200">75%</p>
+            </div>
+            <p class="text-center text-gray-600 dark:text-gray-400 mb-4">Meta Mensual Completada</p>
+            <button class="w-full py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">Establecer nuevas metas</button>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Perfil General</h2>
+            <div class="flex items-center space-x-4">
+                <img src="https://via.placeholder.com/64" alt="Foto de perfil" class="w-16 h-16 rounded-full border-2 border-gray-300 dark:border-gray-600">
+                <div>
+                    <p class="font-bold text-gray-800 dark:text-white">Nombre del Usuario</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Tu perfil está <span class="font-bold text-green-500">75%</span> completo.</p>
+                </div>
+            </div>
+            <a href="#" class="mt-4 block w-full text-center py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition">Completar perfil</a>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Novedades</h2>
+            <ul>
+                <li class="mb-2 text-gray-800 dark:text-gray-200 flex items-center">
+                    <span class="mr-2 text-red-500">&#x2022;</span> Tienes 3 nuevos mensajes.
+                </li>
+                <li class="mb-2 text-gray-800 dark:text-gray-200 flex items-center">
+                    <span class="mr-2 text-blue-500">&#x2022;</span> Tu informe mensual está listo.
+                </li>
+                <li class="mb-2 text-gray-800 dark:text-gray-200 flex items-center">
+                    <span class="mr-2 text-green-500">&#x2022;</span> Se ha actualizado tu plan de pago.
+                </li>
+            </ul>
+            <a href="#" class="mt-4 block text-sm text-center text-indigo-600 dark:text-indigo-400 hover:underline">Ver todas las notificaciones</a>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4">💡 Tip del Día</h2>
+            <p class="text-gray-600 dark:text-gray-400">
+                ¡Aprovecha al máximo tu perfil! Agregar una descripción completa puede aumentar tu visibilidad en un 50%.
+            </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg lg:col-span-2">
+            <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Última Actividad</h2>
+            <ul class="space-y-3">
+                <li class="flex items-start text-gray-600 dark:text-gray-400">
+                    <span class="mr-2 text-gray-500">&#x2022;</span>
+                    <div>
+                        <p>Publicaste un nuevo artículo.</p>
+                        <span class="text-xs">Hace 2 horas</span>
+                    </div>
+                </li>
+                <li class="flex items-start text-gray-600 dark:text-gray-400">
+                    <span class="mr-2 text-gray-500">&#x2022;</span>
+                    <div>
+                        <p>Has recibido un nuevo comentario.</p>
+                        <span class="text-xs">Hace 5 horas</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Enlaces Rápidos</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <a href="#" class="flex flex-col items-center justify-center p-4 bg-gray-200 dark:bg-gray-700 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                    <span class="text-2xl mb-1">✍️</span>
+                    <span class="text-sm text-gray-800 dark:text-white">Crear</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center p-4 bg-gray-200 dark:bg-gray-700 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                    <span class="text-2xl mb-1">📈</span>
+                    <span class="text-sm text-gray-800 dark:text-white">Reportes</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center p-4 bg-gray-200 dark:bg-gray-700 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                    <span class="text-2xl mb-1">⚙️</span>
+                    <span class="text-sm text-gray-800 dark:text-white">Configuración</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center p-4 bg-gray-200 dark:bg-gray-700 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                    <span class="text-2xl mb-1">❓</span>
+                    <span class="text-sm text-gray-800 dark:text-white">Ayuda</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
