@@ -5,5 +5,6 @@ export const environment = {
   companyName: 'Pets-app',
   companySlogan: 'The best pets',
   petsApiKey: '######',
-  apiPetsUrl: 'http://localhost:3000/api'
+  apiPetsUrl: 'http://localhost:3000/api',
+  apiUserUrl: 'http://localhost:3000/user'
 }

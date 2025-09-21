@@ -6,6 +6,6 @@ const petsData = [
   { id: 2, name: 'Whiskers', species: 'Cat', breed: 'Siamese', age: 5 },
 ];
 
-exports.getAllPets = (req, res) => {
+export const getAllPets = (req, res) => {
   res.json(petsData)
 }
