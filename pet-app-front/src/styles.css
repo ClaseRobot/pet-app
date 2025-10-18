@@ -3,3 +3,18 @@
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
+
+@theme {  
+  --color-mint-500: oklch(0.72 0.11 178);
+  --color-primary-50: oklch(97.18% 0.021 257.6);
+  --color-primary-100: oklch(91.71% 0.065 264.4);
+  --color-primary-200: oklch(82.67% 0.117 266.6);
+  --color-primary-300: oklch(73.57% 0.161 267.4);
+  --color-primary-400: oklch(62.68% 0.207 267.8);
+  --color-primary-500: oklch(53.25% 0.233 268.3);
+  --color-primary-600: oklch(44.33% 0.252 270.6);
+  --color-primary-700: oklch(35.53% 0.238 274.6);
+  --color-primary-800: oklch(28.27% 0.187 280.9);
+  --color-primary-900: oklch(24.31% 0.147 289.4);
+  --color-primary-950: oklch(16.74% 0.093 302.5);
+}

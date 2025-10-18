@@ -14,7 +14,7 @@ export class UserService {
 
   getUser() {
     this.http.get(`${environment.apiUserUrl}/user`).subscribe((resp) => {
-      console.log(resp)
+      console.log('User', resp)
       // this.user.set(resp)
     })
   }

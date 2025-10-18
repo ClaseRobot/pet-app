@@ -17,6 +17,11 @@ export default class Layout {
 
   dashboardLink = "/home/dashboard"
   searchLink = "/home/search"
+  inboxLink = "/home/inbox"
+  usersLink = "/home/users"
+  productsLink = "/home/products"
+  signInLink = "/login"
+  signUpLink = "/login"
 
   petServiceData = this.petService.getAllPets()
   userServiceData = this.userService.getUser()
