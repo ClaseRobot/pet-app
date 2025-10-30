@@ -1,28 +1,15 @@
-### Estructura del Backend
-mi-app-mascotas/
-├── node_modules/             # Módulos de Node.js instalados por npm
-├── .env                      # Variables de entorno (claves de API, conexión a DB)
-├── package.json              # Metadatos del proyecto y dependencias
-├── server.js                 # Archivo principal para iniciar el servidor
-│
-├── config/                   # Archivos de configuración
-│   ├── db.js                 # Conexión a la base de datos
-│   └── secrets.js            # Claves para servicios externos (si no usas .env)
-│
-├── controllers/              # Lógica de negocio para cada ruta
-│   ├── petController.js
-│   ├── tipsController.js
-│   └── userController.js
-│
-├── models/                   # Definición de los esquemas de la base de datos
-│   ├── Pet.js
-│   └── User.js
-│
-├── routes/                   # Definición de los endpoints de la API
-│   ├── petRoutes.js
-│   ├── tipsRoutes.js
-│   └── userRoutes.js
-│
-└── services/                 # Lógica compleja y reutilizable
-    ├── tipsGeneratorService.js
-    └── nearbyService.js
+<h1 align="center"> Pet-App </h1>
+<p align="left">
+<img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
+</p>
+
+## :hammer: Pasos para levantar el proyecto
+- `Clonar el proyecto`
+- `git clone direccion_del_repo`
+- `Frontend`: 
+- `Paso 1`: ingresar a la carpeta raiz del frontend y ejecutar npm install para instalar las dependencias necesarias
+- `Paso 2`: ng serve ( para levantar el front )
+
+- `Backend`:
+- `Paso 1`: ingresar a la carpeta raiz del backend y ejecutar npm install para instalar las dependencias necesarias
+- `Paso 2`: node server.js ( para levantar el back )
