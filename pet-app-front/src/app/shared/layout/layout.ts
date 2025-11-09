@@ -17,7 +17,7 @@ export default class Layout {
 
   dashboardLink = "/home/dashboard"
   searchLink = "/home/search"
-  inboxLink = "/home/inbox"
+  chatLink = "/home/chat"
   usersLink = "/home/users"
   productsLink = "/home/products"
   signInLink = "/login"

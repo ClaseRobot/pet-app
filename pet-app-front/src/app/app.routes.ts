@@ -15,6 +15,10 @@ export const routes: Routes = [
         path: 'search',
         loadComponent: () => import('./pets/pages/search-page/search-page')
       },
+      {
+        path: 'chat',
+        loadComponent: () => import('./pets/pages/chat/chat')
+      }
     ]
   },
   {
