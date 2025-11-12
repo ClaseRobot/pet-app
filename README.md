@@ -3,13 +3,20 @@
 <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
 </p>
 
-## :hammer: Pasos para levantar el proyecto
-- `Clonar el proyecto`
-- `git clone direccion_del_repo`
+Este es un proyecto hecho con Angular y Node.
+
+## :hammer: Pasos para levantar el proyecto en Dev
+1. Clonar el proyecto
+    `git clone https://github.com/ClaseRobot/pet-app.git`
 - `Frontend`: 
-- `Paso 1`: ingresar a la carpeta raiz del frontend y ejecutar npm install para instalar las dependencias necesarias
-- `Paso 2`: ng serve ( para levantar el front )
+1. Ingresar a la carpeta raiz del frontend
+2. Ejecutar `npm install` para instalar las dependencias necesarias
+3. iniciar el servidor del frontend con `ng serve`
+4. Navegar a `http://localhost:4200/`
 
 - `Backend`:
-- `Paso 1`: ingresar a la carpeta raiz del backend y ejecutar npm install para instalar las dependencias necesarias
-- `Paso 2`: node server.js ( para levantar el back )
+1. Ingresar a la carpeta raiz del backend
+2. Ejecutar `npm install` para instalar las dependencias necesarias
+3. iniciar el servidor del backend con `node server.js`
+
+Abrir instancias separadas de la terminal que uses para levantar los ambientes.
