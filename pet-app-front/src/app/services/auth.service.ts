@@ -1,22 +1,28 @@
 import { HttpClient } from "@angular/common/http";
-import { inject, Injectable } from "@angular/core";
+import { inject, Injectable, signal } from "@angular/core";
 import { Observable, of, throwError } from "rxjs";
-import { delay } from 'rxjs/operators'
+import { delay, tap } from 'rxjs/operators'
 
 
 interface AuthResponse {
   token: string;
-  user: { id: number; email: string; name: string }
+  user: { 
+    id: number; 
+    email: string; 
+    name: string 
+  }
 }
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private http = inject(HttpClient)
-  private apiUrl = 'https://api.tudominio.com/auth'; // 👈 URL real del backend
+  private apiUrl = 'http://localhost:3000/auth'; // 👈 URL real del backend, pasarla al environment
 
   // Credenciales MOCK (Temporales, solo para simular un inicio de sesión exitoso)
   private readonly MOCK_EMAIL = 'test@example.com';
   private readonly MOCK_PASSWORD = 'password123';
+
+  currentUser = signal<AuthResponse['user'] | null>(null);
 
   // ------------------------------------------------------------------
   // 1. Método para el MOCK (PRUEBAS INICIALES)
@@ -44,5 +50,15 @@ export class AuthService {
   // 2. Método para la LÓGICA REAL (Futuro)
   // ------------------------------------------------------------------
   // Endpoint al back
+
+  login(email: string, password: string): Observable<AuthResponse> {
+    return this.http.post<AuthResponse>(`${this.apiUrl}/auth`, { email, password })
+      .pipe(
+        tap(response => {
+          localStorage.setItem('pet_token', response.token);
+          this.currentUser.set(response.user)
+        })
+      )
+  }
   
 }

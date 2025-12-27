@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3000;
 const petRoutes = require('./routes/petRoutes')
 const userRoutes = require('./routes/userRoutes')
 const chatRoutes = require('./routes/chatRoutes')
+const authRoutes = require('./routes/authRoutes')
 
 // Middleware: permite a Express procesar JSON.
 // Esto es crucial para manejar los datos enviados desde el frontend (Angular).
@@ -26,6 +27,7 @@ app.use((req, res, next) => {
 app.use('/api', petRoutes)
 app.use('/user', userRoutes)
 app.use('/chatbot', chatRoutes)
+app.use('/auth', authRoutes)
 
 // Ruta de prueba para verificar que el servidor funciona
 app.get('/', (req, res) => {

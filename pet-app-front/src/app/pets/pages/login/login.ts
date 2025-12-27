@@ -52,7 +52,7 @@ export default class Login {
     
     console.log('Formulario valido. Datos: ', this.loginForm.value)
     
-    this.authService.loginMock(email, password).subscribe({
+    this.authService.login(email, password).subscribe({
       next: (response) => {
         this.loginError = false
         console.log('Inicio de sesion exitoso: ', response)
