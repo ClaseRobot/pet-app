@@ -1,4 +1,6 @@
 // Archivo principal para iniciar el servidor
+// import connectDB from './config/db';
+const connectDB = require('./config/db')
 const express = require('express');
 const cors = require('cors')
 const app = express();
@@ -9,10 +11,13 @@ const userRoutes = require('./routes/userRoutes')
 const chatRoutes = require('./routes/chatRoutes')
 const authRoutes = require('./routes/authRoutes')
 
+
 // Middleware: permite a Express procesar JSON.
 // Esto es crucial para manejar los datos enviados desde el frontend (Angular).
 app.use(express.json());
 app.use(cors())
+
+connectDB()
 
 // Middleware de Log (Se ejecuta después del body-parser)
 app.use((req, res, next) => {
@@ -28,6 +33,7 @@ app.use('/api', petRoutes)
 app.use('/user', userRoutes)
 app.use('/chatbot', chatRoutes)
 app.use('/auth', authRoutes)
+app.use('/api', authRoutes)
 
 // Ruta de prueba para verificar que el servidor funciona
 app.get('/', (req, res) => {
