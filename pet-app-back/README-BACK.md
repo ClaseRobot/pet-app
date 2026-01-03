@@ -26,3 +26,60 @@ mi-app-mascotas/
 └── services/                 # Lógica compleja y reutilizable
     ├── tipsGeneratorService.js
     └── nearbyService.js
+
+### Estructura del Backend Hexagonal
+mi-app-mascotas/
+├── node_modules/
+├── .env
+├── package.json
+├── server.js                # Bootstrap (Express, middlewares, DI)
+│
+├── src/
+│   ├── domain/              # 🧠 Núcleo del negocio (NO frameworks)
+│   │   ├── entities/        # Entidades del dominio
+│   │   │   ├── Pet.js
+│   │   │   └── User.js
+│   │   │
+│   │   ├── usecases/        # Casos de uso (reglas de negocio)
+│   │   │   ├── CreatePet.js
+│   │   │   ├── GetPets.js
+│   │   │   ├── GenerateTips.js
+│   │   │   └── RegisterUser.js
+│   │   │
+│   │   └── ports/           # Interfaces (puertos)
+│   │       ├── PetRepository.js
+│   │       ├── UserRepository.js
+│   │       ├── TipsProvider.js
+│   │       └── NearbyServicePort.js
+│   │
+│   ├── adapters/            # 🔌 Entradas (HTTP, CLI, eventos)
+│   │   └── http/
+│   │       ├── controllers/
+│   │       │   ├── PetController.js
+│   │       │   ├── TipsController.js
+│   │       │   └── UserController.js
+│   │       │
+│   │       └── routes/
+│   │           ├── petRoutes.js
+│   │           ├── tipsRoutes.js
+│   │           └── userRoutes.js
+│   │
+│   ├── infrastructure/      # 🏗️ Detalles técnicos
+│   │   ├── db/
+│   │   │   └── mongoose/
+│   │   │       ├── PetModel.js
+│   │   │       └── UserModel.js
+│   │   │
+│   │   ├── repositories/    # Adaptadores a DB
+│   │   │   ├── PetRepositoryMongo.js
+│   │   │   └── UserRepositoryMongo.js
+│   │   │
+│   │   └── external/        # APIs externas / servicios
+│   │       ├── TipsGeneratorService.js
+│   │       └── NearbyService.js
+│   │
+│   └── config/              # Configuración técnica
+│       ├── db.js
+│       └── secrets.js
+│
+└── README-BACK.md

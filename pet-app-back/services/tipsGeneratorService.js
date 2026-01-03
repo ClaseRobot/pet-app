@@ -1,1 +1,0 @@
-// # Lógica compleja y reutilizable

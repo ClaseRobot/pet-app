@@ -4,9 +4,9 @@ const cors = require('cors')
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const petRoutes = require('./routes/petRoutes')
-const userRoutes = require('./routes/userRoutes')
-const chatRoutes = require('./routes/chatRoutes')
+const petRoutes = require('./src/adapters/http/routes/petRoutes')
+const userRoutes = require('./src/adapters/http/routes/userRoutes')
+const chatRoutes = require('./src/adapters/http/routes/chatRoutes')
 
 // Middleware: permite a Express procesar JSON.
 // Esto es crucial para manejar los datos enviados desde el frontend (Angular).
