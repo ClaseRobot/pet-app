@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', loadComponent: () => import('./pets/pages/login/login') },
+  { path: 'register', loadComponent: () => import('./features/auth/components/register/register')},
   {
     path: 'home',
     loadComponent: () => import('./shared/layout/layout'),

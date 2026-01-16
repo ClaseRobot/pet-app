@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router'
+import { Router, RouterLink } from '@angular/router'
 import { JsonPipe } from '@angular/common';
 import { FormBuilder, FormControl, Validators, FormGroup, ReactiveFormsModule } from '@angular/forms'
 import { FormUtils } from '../../../utils/form-utils';
@@ -7,12 +7,13 @@ import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-login',
-  imports: [JsonPipe, ReactiveFormsModule],
+  imports: [JsonPipe, ReactiveFormsModule, RouterLink],
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
 export default class Login {
   title = 'Login page buenarda'
+  signUpLink = "/register"
 
   private router = inject(Router)
   private fb = inject(FormBuilder)

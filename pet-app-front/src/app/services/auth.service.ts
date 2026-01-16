@@ -55,10 +55,15 @@ export class AuthService {
     return this.http.post<AuthResponse>(`${this.apiUrl}/auth`, { email, password })
       .pipe(
         tap(response => {
+          console.log('response', response)
           localStorage.setItem('pet_token', response.token);
           this.currentUser.set(response.user)
         })
       )
+  }
+
+  register(userData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/register`, userData)
   }
   
 }

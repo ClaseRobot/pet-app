@@ -47,6 +47,12 @@ exports.login = async (req, res) => {
   console.log('login back', req.body)
   const { email, password } = req.body;
 
+
+  //TODO Creo q aca en lugar de encriptarlo tengo q desencriptarlo
+  const salt = await bcrypt.genSalt(10)
+  const passwordEncrypt = await bcrypt.hash(password, salt)
+  console.log('password bcrypt', passwordEncrypt)
+
   try {
     if(!email || !password) {
       return res.status(400).json({ message: "Email y password son requeridos" })
@@ -59,7 +65,7 @@ exports.login = async (req, res) => {
       return res.status(401).json({ message: "El usuario no existe" })
     }
 
-    if(user.password != password) {
+    if(user.password != passwordEncrypt) {
       return res.status(401).json({ message: "Password incorrecto" })
     }
 

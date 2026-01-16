@@ -17,6 +17,6 @@ Este es un proyecto hecho con Angular y Node.
 - `Backend`:
 1. Ingresar a la carpeta raiz del backend
 2. Ejecutar `npm install` para instalar las dependencias necesarias
-3. iniciar el servidor del backend con `node server.js`
+3. iniciar el servidor del backend con `npm run dev` o `npm start`
 
 Abrir instancias separadas de la terminal que uses para levantar los ambientes.
