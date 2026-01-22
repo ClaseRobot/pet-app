@@ -2,7 +2,11 @@
   "name": "pet-app-back",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node server.js",
+    "build": "tsc",
+    "dev": "tsx watch server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,5 +18,11 @@
     "express": "^5.1.0",
     "pg": "^8.16.3",
     "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   }
 }
